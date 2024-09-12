@@ -54,8 +54,6 @@ RES <- limma::topTable(fit2, number = Inf)
 DEGS <- limma::topTable(fit2, number = Inf , p.value = 0.05, lfc = 1.5) 
 write.csv(RES, "RES.csv")
 write.csv(DEGS, "DEGS_lfc1.5.csv")
-write.csv(RES, "RES.csv")
-write.csv(DEGS, "DEGS_lfc1.csv")
 #===============================================================================
 
 
