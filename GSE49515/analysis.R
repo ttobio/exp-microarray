@@ -12,12 +12,12 @@ gse33146 <- getGEO('GSE49515')
 gse66417 <- gse66417[[1]]
 #Reading CEL data using the oligo package (Raw data)
 library(oligoClasses)
-gse33146_celdata <- read.celfiles(list.celfiles('GSE33146',full.names=TRUE,listGzipped=TRUE))
+gse33146_celdata <- read.celfiles(list.celfiles('GSE49515',full.names=TRUE,listGzipped=TRUE))
 #===============================================================================
 library(tidyverse)
 pd <- pData(gse33146)
 pd['cel_file'] <- str_split(pd$supplementary_file,"/") %>% map_chr(tail,1)
-gse33146_celdata <- read.celfiles(paste0('GSE49515/',pd$cel_file),phenoData=phenoData(gse33146))
+gse33146_celdata <- read.celfiles(paste0('GSE49515/',pd$cel_file),phenoData=phenoData(gse49515))
 pData(gse33146_celdata)[,c("geo_accession","cell line:ch1","culture medium:ch1")]
 varLabels(gse66417)
 ##upstream analysis of microarray data
