@@ -6,7 +6,7 @@ library(affy)
 library(oligo)
 library(hgu133plus2.db)
 library(org.Hs.eg.db)
-################################################################################
+#==============================================================================
 #Retrieving the whole GSE as a list of ExpressionSets
 gse33146 <- getGEO('GSE49515')
 gse66417 <- gse66417[[1]]
